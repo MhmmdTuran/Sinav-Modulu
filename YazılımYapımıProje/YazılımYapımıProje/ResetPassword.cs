@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class RefreshPassword : Form
+    public partial class ResetPassword : Form
     {
-        public RefreshPassword()
+        public ResetPassword()
         {
             InitializeComponent();
         }
@@ -30,7 +30,6 @@ namespace YazılımYapımıProje
             if (userNameMailCorrect)
             {
                 UpdatePassword(connection, txtUsername.Text, txtPassword.Text);
-                this.Close();
             }
             else
                 MessageBox.Show("E-mail veya Kullanıcı Adı hatalı!");
@@ -57,7 +56,7 @@ namespace YazılımYapımıProje
 
         private void UpdatePassword(SqlConnection con, string userName, string password)
         {
-            if(txtPassword.Text == txtPassword2.Text)
+            if (txtPassword.Text == txtPassword2.Text)
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Update Users Set Password = '" + txtPassword.Text + "' " +
@@ -65,6 +64,7 @@ namespace YazılımYapımıProje
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Güncellendi");
+                this.Close();
             }
             else
             {
@@ -99,6 +99,6 @@ namespace YazılımYapımıProje
 
         #endregion
 
-        
+
     }
 }

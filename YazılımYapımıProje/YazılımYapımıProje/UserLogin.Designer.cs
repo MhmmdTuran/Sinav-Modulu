@@ -1,7 +1,7 @@
 ﻿
 namespace YazılımYapımıProje
 {
-    partial class LoginScreen
+    partial class UserLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace YazılımYapımıProje
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLogin));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -89,7 +89,7 @@ namespace YazılımYapımıProje
             this.btnLogin.Location = new System.Drawing.Point(112, 160);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(197, 49);
-            this.btnLogin.TabIndex = 37;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "GİRİŞ";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -109,7 +109,7 @@ namespace YazılımYapımıProje
             this.panelChildForm.Location = new System.Drawing.Point(61, 204);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(412, 530);
-            this.panelChildForm.TabIndex = 38;
+            this.panelChildForm.TabIndex = 6;
             this.panelChildForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelChildForm_MouseMove);
             // 
             // btnRegister
@@ -123,7 +123,7 @@ namespace YazılımYapımıProje
             this.btnRegister.Location = new System.Drawing.Point(112, 225);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(197, 49);
-            this.btnRegister.TabIndex = 60;
+            this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "KAYIT OL";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -136,7 +136,7 @@ namespace YazılımYapımıProje
             this.lblStick3.Location = new System.Drawing.Point(194, 339);
             this.lblStick3.Name = "lblStick3";
             this.lblStick3.Size = new System.Drawing.Size(125, 2);
-            this.lblStick3.TabIndex = 57;
+            this.lblStick3.TabIndex = 5;
             this.lblStick3.Visible = false;
             // 
             // lblForgotPassword
@@ -145,8 +145,8 @@ namespace YazılımYapımıProje
             this.lblForgotPassword.ForeColor = System.Drawing.Color.Blue;
             this.lblForgotPassword.Location = new System.Drawing.Point(196, 323);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(130, 17);
-            this.lblForgotPassword.TabIndex = 55;
+            this.lblForgotPassword.Size = new System.Drawing.Size(115, 16);
+            this.lblForgotPassword.TabIndex = 4;
             this.lblForgotPassword.Text = "Şifreni mi unuttun ?";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblSifreUnut_Click);
             this.lblForgotPassword.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblForgotPassword_MouseMove);
@@ -179,7 +179,7 @@ namespace YazılımYapımıProje
             this.lblStick1.Location = new System.Drawing.Point(117, 75);
             this.lblStick1.Name = "lblStick1";
             this.lblStick1.Size = new System.Drawing.Size(193, 2);
-            this.lblStick1.TabIndex = 41;
+            this.lblStick1.TabIndex = 7;
             // 
             // lblStick2
             // 
@@ -189,7 +189,7 @@ namespace YazılımYapımıProje
             this.lblStick2.Location = new System.Drawing.Point(116, 131);
             this.lblStick2.Name = "lblStick2";
             this.lblStick2.Size = new System.Drawing.Size(193, 2);
-            this.lblStick2.TabIndex = 40;
+            this.lblStick2.TabIndex = 8;
             // 
             // lblHeaderStick
             // 
@@ -199,7 +199,7 @@ namespace YazılımYapımıProje
             this.lblHeaderStick.Location = new System.Drawing.Point(24, 178);
             this.lblHeaderStick.Name = "lblHeaderStick";
             this.lblHeaderStick.Size = new System.Drawing.Size(490, 5);
-            this.lblHeaderStick.TabIndex = 58;
+            this.lblHeaderStick.TabIndex = 9;
             // 
             // imgLoginIcon
             // 
@@ -215,7 +215,7 @@ namespace YazılımYapımıProje
             // 
             this.timer1.Enabled = true;
             // 
-            // LoginScreen
+            // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,9 +224,9 @@ namespace YazılımYapımıProje
             this.Controls.Add(this.imgLoginIcon);
             this.Controls.Add(this.lblHeaderStick);
             this.Controls.Add(this.panelChildForm);
-            this.Name = "LoginScreen";
+            this.Name = "UserLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPasswordIcon)).EndInit();

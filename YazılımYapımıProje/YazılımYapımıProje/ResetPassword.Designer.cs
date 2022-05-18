@@ -1,7 +1,7 @@
 ﻿
 namespace YazılımYapımıProje
 {
-    partial class RefreshPassword
+    partial class ResetPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace YazılımYapımıProje
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RefreshPassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassword));
             this.lblStick2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.imgUserIcon = new System.Windows.Forms.PictureBox();
@@ -57,11 +57,11 @@ namespace YazılımYapımıProje
             this.lblStick2.Location = new System.Drawing.Point(118, 131);
             this.lblStick2.Name = "lblStick2";
             this.lblStick2.Size = new System.Drawing.Size(193, 2);
-            this.lblStick2.TabIndex = 65;
+            this.lblStick2.TabIndex = 6;
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -85,7 +85,7 @@ namespace YazılımYapımıProje
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -115,7 +115,7 @@ namespace YazılımYapımıProje
             this.lblStick1.Location = new System.Drawing.Point(118, 75);
             this.lblStick1.Name = "lblStick1";
             this.lblStick1.Size = new System.Drawing.Size(193, 2);
-            this.lblStick1.TabIndex = 57;
+            this.lblStick1.TabIndex = 5;
             // 
             // lblStick3
             // 
@@ -125,7 +125,7 @@ namespace YazılımYapımıProje
             this.lblStick3.Location = new System.Drawing.Point(118, 187);
             this.lblStick3.Name = "lblStick3";
             this.lblStick3.Size = new System.Drawing.Size(193, 2);
-            this.lblStick3.TabIndex = 60;
+            this.lblStick3.TabIndex = 7;
             // 
             // imgPasswordIcon
             // 
@@ -139,7 +139,7 @@ namespace YazılımYapımıProje
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -160,7 +160,7 @@ namespace YazılımYapımıProje
             this.lblStick4.Location = new System.Drawing.Point(118, 239);
             this.lblStick4.Name = "lblStick4";
             this.lblStick4.Size = new System.Drawing.Size(193, 2);
-            this.lblStick4.TabIndex = 68;
+            this.lblStick4.TabIndex = 8;
             // 
             // imgPasswordIcon2
             // 
@@ -174,7 +174,7 @@ namespace YazılımYapımıProje
             // 
             // txtPassword2
             // 
-            this.txtPassword2.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPassword2.BackColor = System.Drawing.Color.White;
             this.txtPassword2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
             this.txtPassword2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -188,7 +188,7 @@ namespace YazılımYapımıProje
             // 
             // btnRefreshPassword
             // 
-            this.btnRefreshPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnRefreshPassword.BackColor = System.Drawing.Color.White;
             this.btnRefreshPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRefreshPassword.FlatAppearance.BorderSize = 2;
             this.btnRefreshPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -197,16 +197,16 @@ namespace YazılımYapımıProje
             this.btnRefreshPassword.Location = new System.Drawing.Point(56, 281);
             this.btnRefreshPassword.Name = "btnRefreshPassword";
             this.btnRefreshPassword.Size = new System.Drawing.Size(300, 49);
-            this.btnRefreshPassword.TabIndex = 70;
+            this.btnRefreshPassword.TabIndex = 4;
             this.btnRefreshPassword.Text = "ŞİFREMİ YENİLE";
             this.btnRefreshPassword.UseVisualStyleBackColor = false;
             this.btnRefreshPassword.Click += new System.EventHandler(this.btnRefreshPassword_Click);
             // 
-            // RefreshPassword
+            // ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(412, 372);
             this.Controls.Add(this.btnRefreshPassword);
             this.Controls.Add(this.lblStick4);
@@ -222,7 +222,7 @@ namespace YazılımYapımıProje
             this.Controls.Add(this.imgPasswordIcon);
             this.Controls.Add(this.txtPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RefreshPassword";
+            this.Name = "ResetPassword";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.imgUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmailIcon)).EndInit();

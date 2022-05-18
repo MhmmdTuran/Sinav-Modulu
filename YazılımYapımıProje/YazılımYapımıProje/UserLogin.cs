@@ -11,13 +11,16 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class LoginScreen : Form
+    public partial class UserLogin : Form
     {
-        public LoginScreen()
+        public UserLogin()
         {
             InitializeComponent();
         }
         private Form activeForm = null;
+        private int userID = 0;
+        private int userTypeID = 0;
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -37,13 +40,19 @@ namespace YazılımYapımıProje
             switch (LoginUser(txtUsername.Text, txtPassword.Text))
             {
                 case 1:
-                    MessageBox.Show("Admin Ekranı");
+                    AdminScreen adminScreen = new AdminScreen();
+                    this.Hide();
+                    adminScreen.Show();
                     break;
                 case 2:
-                    MessageBox.Show("Sınav sorumlusu ekranı");
+                    ExaminerScreen examinerScreen = new ExaminerScreen();
+                    this.Hide();
+                    examinerScreen.Show();
                     break;
                 case 3:
-                    MessageBox.Show("Öğrenci ekranı");
+                    StudentScreen studentScreen = new StudentScreen(txtUsername.Text, userID);
+                    this.Hide();
+                    studentScreen.Show();
                     break;
                 default:
                     MessageBox.Show("Böyle bir kayıt yok!");
@@ -53,8 +62,6 @@ namespace YazılımYapımıProje
 
         private int LoginUser(string username, string password)
         {
-            int userType = 0;
-
             const string conStr = @"Data Source=.\;Initial Catalog=dbStudentExamSystem;Integrated Security=True";
             SqlConnection connection = new SqlConnection(conStr);
             connection.Open();
@@ -68,12 +75,13 @@ namespace YazılımYapımıProje
                 if (Convert.ToString(dr["UserName"]) == username &&
                     Convert.ToString(dr["Password"]) == password)
                 {
-                    userType = Convert.ToInt32(dr["UserTypeID"]);
+                    userTypeID = Convert.ToInt32(dr["UserTypeID"]);
+                    userID = Convert.ToInt32(dr["UserID"]);
                     break;
                 }
             }
 
-            return userType;
+            return userTypeID;
         }
 
         #region Designer
@@ -81,14 +89,15 @@ namespace YazılımYapımıProje
         private void lblSifreUnut_Click(object sender, EventArgs e)
         {
             System.Threading.Thread.Sleep(300);
-            openChildForm(new RefreshPassword());
+            txtUsername.Text = ""; txtPassword.Text = "";
+            openChildForm(new ResetPassword());
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             System.Threading.Thread.Sleep(300);
-            openChildForm(new SignUp());
-            
+            openChildForm(new UserRegister());
+
         }
 
         private void panelChildForm_MouseMove(object sender, MouseEventArgs e)
@@ -99,6 +108,7 @@ namespace YazılımYapımıProje
 
         private void lblForgotPassword_MouseMove(object sender, MouseEventArgs e)
         {
+            System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Hand;
             lblStick3.Visible = true;
         }
 

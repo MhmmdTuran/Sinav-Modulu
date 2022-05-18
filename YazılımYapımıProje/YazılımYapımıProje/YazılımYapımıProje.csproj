@@ -46,14 +46,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonSettings\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbStudentExamSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbStudentExamSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbStudentExamSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbStudentExamSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminerScreen.Designer.cs">
+      <DependentUpon>ExaminerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamModul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamModul.Designer.cs">
+      <DependentUpon>ExamModul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlManager.cs" />
+    <Compile Include="StudentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentScreen.Designer.cs">
+      <DependentUpon>StudentScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="IRegisterProcedure.cs" />
-    <Compile Include="RadioButtonSettings\RJRadioButton.cs">
+    <Compile Include="RadioSettings\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RegisterExamManager.cs" />
     <Compile Include="RegisterFactory.cs" />
     <Compile Include="RegisterManager.cs" />
     <Compile Include="RegisterStudent.cs" />
+    <Compile Include="TryExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TryExam.Designer.cs">
+      <DependentUpon>TryExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +124,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminerScreen.resx">
+      <DependentUpon>ExaminerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamModul.resx">
+      <DependentUpon>ExamModul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentScreen.resx">
+      <DependentUpon>StudentScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TryExam.resx">
+      <DependentUpon>TryExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +160,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dbStudentExamSystemDataSet.xsc">
+      <DependentUpon>dbStudentExamSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbStudentExamSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbStudentExamSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbStudentExamSystemDataSet.xss">
+      <DependentUpon>dbStudentExamSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbStudentExamSystemDataSet1.xsc">
+      <DependentUpon>dbStudentExamSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbStudentExamSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbStudentExamSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbStudentExamSystemDataSet1.xss">
+      <DependentUpon>dbStudentExamSystemDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

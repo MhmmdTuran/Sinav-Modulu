@@ -24,7 +24,7 @@ namespace YazılımYapımıProje
             UserInfo = userInfo;
             Connection = connection;
             UserTypeID = userTypeID;
-            
+
             if (UserNameControl() == false)
                 PrintToDatabase();
             else
@@ -49,7 +49,7 @@ namespace YazılımYapımıProje
                 command.Parameters.AddWithValue("UserTypeID", UserTypeID);
                 command.ExecuteNonQuery();
                 Connection.Close();
-
+                DefaultQuestionDayStep();
                 System.Windows.Forms.MessageBox.Show("Kayıt Başarıyla oluşturuldu!");
             }
             catch (Exception ex)
@@ -77,6 +77,22 @@ namespace YazılımYapımıProje
 
             Connection.Close();
             return false;
+        }
+
+        private static void DefaultQuestionDayStep()
+        {
+            Connection.Open();
+            SqlCommand command = new SqlCommand("Insert Into Steps " +
+                                                    "(Step1, Step2, Step3, Step4, Step5)" +
+                                                    "values " +
+                                                    "(@Step1, @Step2, @Step3, @Step4, @Step5)", Connection);
+
+            command.Parameters.AddWithValue("Step1", 7);
+            command.Parameters.AddWithValue("Step2", 30);
+            command.Parameters.AddWithValue("Step3", 90);
+            command.Parameters.AddWithValue("Step4", 180);
+            command.Parameters.AddWithValue("Step5", 365);
+            command.ExecuteNonQuery();
         }
     }
 }

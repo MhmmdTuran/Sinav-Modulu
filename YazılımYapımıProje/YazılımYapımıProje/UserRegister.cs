@@ -11,9 +11,9 @@ using System.Threading;
 
 namespace YazılımYapımıProje
 {
-    public partial class SignUp : Form
+    public partial class UserRegister : Form
     {
-        public SignUp()
+        public UserRegister()
         {
             InitializeComponent();
         }
@@ -84,7 +84,7 @@ namespace YazılımYapımıProje
             }
         }
         #endregion
-        
+
         #region TextBox_Control
         /*
         >>> Bu Fonksiyon tüm textboxları kontrol eder. İlgili textboxlardan 
@@ -98,7 +98,10 @@ namespace YazılımYapımıProje
                 if (textbox.Text == "" || textbox.Text == texts[textbox.TabIndex])
                     return false;
             }
-            return true;
+            if (rdbtnStudent.Checked || rdbtnExamManager.Checked)
+                return true;
+            else
+                return false;
         }
         #endregion
 
